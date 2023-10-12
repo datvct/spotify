@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+/* Navbar */
+.navbar {
+  height: 100px;
+  background: #111827;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar .title {
+  color: white;
+  font-size: 35px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+}
+.navbar .fa {
+  margin-right: 20px;
+}
+
+/* Container */
+.container {
+  display: grid;
+  grid-template-columns: 508px auto;
+  background-color: #334155;
+  height: 515px;
+  overflow: hidden;
+}
+
+.detailSong {
+  width: 508px;
+  padding: 12px;
+}
+
+.detailSong .nowPlaying {
+  color: #38bdf8;
+  font-size: 16px;
+  font-weight: bold;
+}
+.detailSong .tilte {
+  color: #a3a3a3;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.detailSong .avatar-music {
+  width: 240px;
+  margin: auto;
+  margin-top: 40px;
+}
+.avatar-music .image-music {
+  width: 100%;
+}
+.detailSong .avatar-author {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+.avatar-author .image-author {
+  width: 70px;
+  border-radius: 50%;
+}
+.avatar-author .author-name {
+  font-size: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.listSong {
+  overflow-y: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar {
+  width: 10px;
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
+.listSong table {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table td {
+  border: none;
+}
+
+.listSong .list-title {
+  color: white;
+  height: 48px;
+}
+
+.listSong .list-title th:nth-child(2) {
+  text-align: left;
+}
+
+.listSong .list-title th:nth-child(3) {
+  width: 20%;
+}
+.listSong .list-title th:nth-child(1),
+.listSong .list-title th:nth-child(4) {
+  width: 10%;
+}
+
+.listSong tbody tr td {
+  text-align: center;
+}
+.listSong td:nth-child(2) {
+  text-align: left;
+}
+
+.listSong tbody tr {
+  background: #1e293b;
+  height: 48px;
+  color: #a3a3a3;
+}
+
+.listSong tbody tr:hover {
+  background: #475569;
+}
+@import "react-h5-audio-player/lib/styles.css";
+
+/* Player */
+.audioPlayer {
+  background-color: #111827 !important;
+  height: 92px;
+}
+.rhap_time,
+.rhap_current-time {
+  color: white !important;
+}
+
+::selection {
+  background-color: transparent;
+  color: #38bdf8;
 }
